@@ -7,10 +7,12 @@ Quick, dirty wrapper for ii written in Perl. Use it like this:
 
 It only wraps the output. You may use `tmux` to split into two windows and `cat > in` to send messages.
 
+**NEW!** Now supports IRC colored messeges!
+
 Screenshot
 ==========
 
-![screenshot for hiii](http://bugsofberk.net/assets/ii-new.png)
+![screenshot for hiii](http://pub.iotek.org/p/1Cyqse6.png)
 
 License
 =======
