@@ -12,7 +12,7 @@ It only wraps the output. You may use `tmux` to split into two windows and `cat 
 Screenshot
 ==========
 
-![screenshot for hiii](http://pub.iotek.org/p/1Cyqse6.png)
+![screenshot for hiii](http://pub.iotek.org/p/xDigZYD.png)
 
 License
 =======
