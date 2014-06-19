@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 my %config = (
-   # You can specify multiple nicknames like, 'berk|bozbalci'
+   # You can specify multiple nicknames like, 'berk|bozbalci'. All will be highlighted.
 
    'nick' => 'berk', 
    'color_nicks' => 'light_green',
@@ -59,6 +59,24 @@ while (<>) {
 
    # Highlight "has joined", "changed mode", etc.
    s/^$useless/$color{$config{'color_server'}}$1$color{'reset'}/;
+
+   # The ^C[color] color sequences:
+   s/\cC0(.*)(\cC)?/$color{'white'}$1$color{'reset'}/;
+   s/\cC1(.*)(\cC)?/$color{'black'}$1$color{'reset'}/;
+   s/\cC2(.*)(\cC)?/$color{'blue'}$1$color{'reset'}/;
+   s/\cC3(.*)(\cC)?/$color{'green'}$1$color{'reset'}/;
+   s/\cC4(.*)(\cC)?/$color{'light_red'}$1$color{'reset'}/;
+   s/\cC5(.*)(\cC)?/$color{'red'}$1$color{'reset'}/;
+   s/\cC6(.*)(\cC)?/$color{'magenta'}$1$color{'reset'}/;
+   s/\cC7(.*)(\cC)?/$color{'light_yellow'}$1$color{'reset'}/;
+   s/\cC8(.*)(\cC)?/$color{'yellow'}$1$color{'reset'}/;
+   s/\cC9(.*)(\cC)?/$color{'light_green'}$1$color{'reset'}/;
+   s/\cC10(.*)(\cC)?/$color{'cyan'}$1$color{'reset'}/;
+   s/\cC11(.*)(\cC)?/$color{'light_cyan'}$1$color{'reset'}/;
+   s/\cC12(.*)(\cC)?/$color{'light_blue'}$1$color{'reset'}/;
+   s/\cC13(.*)(\cC)?/$color{'light_magenta'}$1$color{'reset'}/;
+   s/\cC14(.*)(\cC)?/$color{'black'}$1$color{'reset'}/;
+   s/\cC15(.*)(\cC)?/$color{'light_black'}$1$color{'reset'}/;
 
    print;
 }
